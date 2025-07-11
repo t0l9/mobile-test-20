@@ -43,7 +43,7 @@ public class BrowserStackDriver implements WebDriverProvider {
         try {
             return new RemoteWebDriver(new URL(config.hubUrl()), caps);
         } catch (MalformedURLException e) {
-            throw new RuntimeException("Invalid URL for BrowserStack hub", e);
+            throw new RuntimeException(e);
         }
     }
 }

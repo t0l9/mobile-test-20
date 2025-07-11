@@ -32,5 +32,5 @@ public interface MobileConfig extends Config {
     String iosOS();
 
     @Key("platform")
-    String platform(); // android или ios
+    String platform();
 }
