@@ -62,3 +62,10 @@ tasks.named("allureReport") {
         }
     }
 }
+
+tasks.register("platformTest", Test) {
+    useJUnitPlatform()
+    systemProperty 'platform', System.getProperty("platform", "android")
+    systemProperty 'bs_user', System.getenv("BROWSERSTACK_USER")
+    systemProperty 'bs_key', System.getenv("BROWSERSTACK_KEY")
+}
